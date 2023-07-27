@@ -1,0 +1,68 @@
+[
+  {
+    "name": "prompt",
+    "window": "MainWindow",
+    "method": "prompt",
+    "db_path": "sd-metadata.image.prompt"
+  },
+  {
+    "name": "negativePrompt",
+    "window": "MainWindow",
+    "method": "negative_prompt",
+    "db_path": "sd-metadata.image.prompt"
+  },
+  {
+    "name": "modelName",
+    "window": "SettingsDock",
+    "method": "model",
+    "db_path": "sd-metadata.model_weights"
+  },
+  {
+    "name": "numStep",
+    "window": "SettingsDock",
+    "method": "steps",
+    "db_path": "sd-metadata.image.steps"
+  },
+  {
+    "name": "cfgScale",
+    "window": "SettingsDock",
+    "method": "cfg",
+    "db_path": "sd-metadata.image.cfg_scale"
+  },
+    {
+    "name": "imageWidth",
+    "window": "SettingsDock",
+    "method": "width",
+    "db_path": "sd-metadata.image.width"
+  },
+  {
+    "name": "imageHeight",
+    "window": "SettingsDock",
+    "method": "height",
+    "db_path": "sd-metadata.image.height"
+  },
+  {
+    "name": "sampler",
+    "window": "SettingsDock",
+    "method": "sampler",
+    "db_path": "sd-metadata.image.sampler"
+  },
+  {
+    "name": "seed",
+    "window": "SettingsDock",
+    "method": "seed",
+    "db_path": "sd-metadata.image.seed"
+  },
+  {
+    "name": "noiseThreshold",
+    "window": "SettingsDock",
+    "method": "threshold",
+    "db_path": "sd-metadata.image.threshold"
+  },
+  {
+    "name": "perlinNoise",
+    "window": "SettingsDock",
+    "method": "perlin",
+    "db_path": "sd-metadata.image.perlin"
+  }
+]

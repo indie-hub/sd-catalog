@@ -1,0 +1,19 @@
+<RCC>
+  <qresource prefix="image">
+    <file>icons/star-icon.png</file>
+    <file>icons/calender.svg</file>
+    <file>icons/favorite.svg</file>
+    <file>icons/filter.svg</file>
+    <file>icons/filter-slash.svg</file>
+    <file>icons/folder-open.svg</file>
+    <file>icons/heart.svg</file>
+    <file>icons/heart-break.svg</file>
+    <file>icons/heart-medical.svg</file>
+    <file>icons/letter-english-a.svg</file>
+    <file>icons/sort-amount-down.svg</file>
+    <file>icons/sort-amount-up.svg</file>
+  </qresource>
+  <qresource prefix="configuration">
+    <file>button_config.json</file>
+  </qresource>
+</RCC>

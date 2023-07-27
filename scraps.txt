@@ -1,0 +1,66 @@
+        MainWindow.setDockOptions(QtWidgets.QMainWindow.DockOption.AllowNestedDocks|QtWidgets.QMainWindow.DockOption.AllowTabbedDocks|QtWidgets.QMainWindow.DockOption.AnimatedDocks|QtWidgets.QMainWindow.DockOption.VerticalTabs)
+
+
+
+import sys
+from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QPixmap
+from PyQt5.QtWidgets import QApplication, QListWidget, QListWidgetItem, QLabel, QVBoxLayout, QWidget
+from PIL import Image
+
+class ThumbnailWidget(QWidget):
+    def __init__(self, image_path):
+        super().__init__()
+
+        # Create a QVBoxLayout for the widget
+        layout = QVBoxLayout()
+
+        # Load the image using Pillow
+        image = Image.open(image_path)
+
+        # Create a QPixmap from the image
+        pixmap = QPixmap.fromImage(image.toqimage())
+
+        # Create a QLabel and set the pixmap as its content
+        label = QLabel()
+        label.setPixmap(pixmap)
+
+        # Add the QLabel to the QVBoxLayout
+        layout.addWidget(label)
+
+        # Set the QVBoxLayout as the layout for the widget
+        self.setLayout(layout)
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+
+    # Create a QListWidget
+    list_widget = QListWidget()
+
+    # Add thumbnails to the QListWidget
+    thumbnails = ["image1.jpg", "image2.jpg", "image3.jpg"]
+
+    for thumbnail_path in thumbnails:
+        item = QListWidgetItem(list_widget)
+
+        # Create a ThumbnailWidget as the item widget
+        thumbnail_widget = ThumbnailWidget(thumbnail_path)
+        item.setSizeHint(thumbnail_widget.sizeHint())
+        list_widget.setItemWidget(item, thumbnail_widget)
+
+    # Create a QWidget as the parent widget
+    parent_widget = QWidget()
+
+    # Create a QVBoxLayout for the parent widget
+    layout = QVBoxLayout()
+
+    # Add the QListWidget to the QVBoxLayout
+    layout.addWidget(list_widget)
+
+    # Set the QVBoxLayout as the layout for the parent widget
+    parent_widget.setLayout(layout)
+
+    # Show the parent widget
+    parent_widget.show()
+
+    sys.exit(app.exec_())
